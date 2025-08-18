@@ -1,0 +1,33 @@
+zebra
+apple
+banana
+cherry
+apple
+100
+2
+30
+1
+1
+15
+Alice	25	Moscow
+Bob	30	London
+Charlie	20	Paris
+Diana	35	Berlin
+Eve	22	Rome
+Item1	100	A
+Item2	2	B
+Item3	30	C
+Item4	1	D
+Item5	15	E
+apple
+banana
+apple
+cherry
+banana
+orange
+apple
+hello world
+hello-world  
+hello_world
+HELLO WORLD
+Hello World

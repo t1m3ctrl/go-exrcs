@@ -62,12 +62,13 @@ func TestEventService_CreateEvent(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			event, err := service.CreateEvent(tt.req)
 			if (err != nil) != tt.wantErr {
-				t.Fatalf("CreateEvent() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("CreateEvent() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 			if !tt.wantErr {
 				if event == nil {
 					t.Error("CreateEvent() returned nil event")
+					return
 				}
 				if event.ID == 0 {
 					t.Error("CreateEvent() event ID not set")
@@ -146,6 +147,7 @@ func TestEventService_UpdateEvent(t *testing.T) {
 			if !tt.wantErr {
 				if updatedEvent == nil {
 					t.Error("UpdateEvent() returned nil event")
+					return
 				}
 				if updatedEvent.Title != tt.req.Title {
 					t.Errorf("UpdateEvent() title = %v, want %v", updatedEvent.Title, tt.req.Title)
